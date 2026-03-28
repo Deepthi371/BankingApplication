@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Apply for Loan</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: linear-gradient(120deg, #74ebd5 0%, #ACB6E5 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: #333;
+        }
+
+        .logout-container {
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            text-align: right; /* Changed to right */
+        }
+
+        .logout-btn {
+            background-color: blue;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .logout-btn:hover {
+            background-color: #003d99;
+        }
+
+        .container {
+            background: #ffffffdd;
+            padding: 30px 40px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #00b894;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #019875;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logout-container">
+        <form action="logout" method="get" style="display: inline;">
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Loan Application Form</h2>
+        <form action="ApplyLoan" method="post">
+
+            <label for="accno">Account Number:</label>
+            <input type="number" id="accno" name="accno" required>
+
+            <label for="loanAmount">Loan Amount:</label>
+            <input type="number" id="loanAmount" name="loanAmount" required>
+
+            <label for="tenure">Tenure (months):</label>
+            <input type="number" id="tenure" name="tenure" required>
+
+            <label for="purpose">Purpose:</label>
+            <select id="purpose" name="purpose" required>
+                <option value="Education">Education</option>
+                <option value="Medical">Medical</option>
+                <option value="Home Renovation">Home Renovation</option>
+                <option value="Travel">Travel</option>
+                <option value="Business">Business</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="submit" value="Apply Loan">
+        </form>
+    </div>
+
+</body>
+</html>

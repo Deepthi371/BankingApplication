@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Page</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: white;
+      padding: 30px 40px 90px; 
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 480px; /* increased width */
+      position: relative;
+      box-sizing: border-box;
+    }
+    .logout-container {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%; /* make container wider */
+      text-align: center;
+    }
+    .logout-container button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 15px 0; /* taller button */
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 18px; /* bigger font */
+      width: 100%; /* full width of container */
+      box-shadow: 0 4px 8px rgba(52, 152, 219, 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logout-container button:hover {
+      background-color: #2980b9;
+      box-shadow: 0 6px 12px rgba(41, 128, 185, 0.7);
+    }
+
+    /* Heading */
+    h3 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    /* Form labels and inputs */
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    /* Submit button */
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px 0;
+      background-color: #2575fc;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #1a5ddb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h3>User Registration</h3>
+
+    <form action="Register" method="post">
+
+      <label>User Name</label><br>
+      <input type="text" name="uname" required><br>
+      
+      <label>Account Number</label><br>
+      <input type="text" name="accno" required><br>
+      
+      <label>Email</label><br>
+      <input type="text" name="email" required><br>
+      
+      <label>Phone</label><br>
+      <input type="text" name="phn" required><br>
+      
+      <label>Balance</label><br>
+      <input type="text" name="bal" required><br>
+      
+      <label>Password</label><br>
+      <input type="password" name="pwd" required><br>
+      
+      <input type="submit" value="Register">
+
+    </form>
+
+    <div class="logout-container">
+      <form action="logout" method="get" style="display: inline;">
+        <button type="submit">Logout</button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>

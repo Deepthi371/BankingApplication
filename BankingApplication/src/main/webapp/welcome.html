@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Welcome Page - SBI BANK</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* New background gradient */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 320px;
+  }
+
+  h3 {
+    margin-bottom: 40px;
+    color: #333366;
+    font-weight: 700;
+  }
+
+  a.button {
+    display: block;
+    text-decoration: none;
+    padding: 15px 0;
+    margin: 15px 0;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  a.register {
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 4px 10px rgba(40,167,69,0.4);
+  }
+  a.register:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 14px rgba(33,136,56,0.6);
+  }
+
+  a.login {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,123,255,0.4);
+  }
+  a.login:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 14px rgba(0,86,179,0.6);
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>Welcome to SBI BANK</h3>
+    <a href="Register.html" class="button register">Register</a>
+    <a href="Login.html" class="button login">Login</a>
+  </div>
+
+</body>
+</html>

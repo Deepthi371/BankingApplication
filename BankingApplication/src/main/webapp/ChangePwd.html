@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Change Password</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(120deg, #74ebd5 0%, #ACB6E5 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Logout button container */
+  .logout-container {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right; /* changed to right */
+    box-sizing: border-box;
+  }
+  .logout-container form button {
+    background-color: #c0392b; /* changed logout button color to dark red */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .logout-container form button:hover {
+    background-color: #922b21; /* darker shade on hover */
+  }
+
+  /* Main form container */
+  .container {
+    background-color: #ffffffdd;
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+  }
+
+  h4 {
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  label {
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    background-color: #00b894;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #019875;
+  }
+</style>
+</head>
+<body>
+
+  <div class="logout-container">
+    <form action="logout" method="get" style="display: inline;">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h4>Password Change</h4>
+    <form action="ChangePwd" method="post">
+      <label for="opwd">Enter the old password</label>
+      <input type="password" id="opwd" name="opwd" required>
+
+      <label for="npwd">Enter the New password</label>
+      <input type="password" id="npwd" name="npwd" required>
+
+      <label for="cnpwd">Confirm the new password</label>
+      <input type="password" id="cnpwd" name="cnpwd" required>
+
+      <input type="submit" value="Change Password">
+    </form>
+  </div>
+
+</body>
+</html>

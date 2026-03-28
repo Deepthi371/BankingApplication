@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login Success</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(120deg, #74ebd5 0%, #ACB6E5 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+
+  h2 {
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #1e272e;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+  }
+
+  .option-list {
+    width: 320px;
+  }
+
+  .option-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 18px 25px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-weight: 600;
+    font-size: 18px;
+    color: #34495e;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: block;
+  }
+
+  .option-card:hover {
+    background-color: #74ebd5;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  .logout-card {
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  .logout-card:hover {
+    background-color: #c0392b;
+    box-shadow: 0 8px 16px rgba(192, 57, 43, 0.5);
+  }
+
+  @media (max-width: 360px) {
+    .option-list {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <h2>Login Successful</h2>
+
+  <div class="option-list">
+  	<a href="Update.html" class="option-card">Update Profile</a>
+    <a href="Delete.html" class="option-card">Delete Account</a>
+    <a href="Balance" class="option-card">Check Balance</a>
+    <a href="ChangePwd" class="option-card">Change Password</a>
+    <a href="TransferBalance" class="option-card">Transfer Balance</a>
+    <a href="ApplyLoan" class="option-card">Apply for Loan</a>
+    <a href="logout.html" class="option-card logout-card">Logout</a>
+  </div>
+
+</body>
+</html>

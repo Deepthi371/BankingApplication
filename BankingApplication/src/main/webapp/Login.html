@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<style>
+  /* Full viewport height and center content */
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0052d4 0%, #6fb1fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Container for form and logout */
+  .container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 350px;
+    position: relative;
+  }
+
+  /* Logout button container */
+  .logout-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .logout-container button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .logout-container button:hover {
+    background-color: #004494;
+  }
+
+  /* Heading style */
+  h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+  }
+
+  /* Labels and inputs */
+  label {
+    font-weight: bold;
+    color: #555;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  /* Submit button */
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #2575fc;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #1a5ddb;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Logout button -->
+    <div class="logout-container">
+      <form action="logout" method="get" style="display: inline;">
+          <button type="submit">Logout</button>
+      </form>
+    </div>
+
+    <h3>User Login</h3>
+
+    <form action="Login" method="post">
+      <label>Email</label><br>
+      <input type="text" name="email" required><br>
+
+      <label>Password</label><br>
+      <input type="password" name="pwd" required><br>
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+</body>
+</html>

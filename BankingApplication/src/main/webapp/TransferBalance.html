@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transfer Balance</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(120deg, #74ebd5 0%, #ACB6E5 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        background-color: #ffffffdd;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+    }
+
+    h4 {
+        margin-bottom: 25px;
+        font-size: 24px;
+        color: #2c3e50;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        text-align: left;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    input[type="submit"] {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #2c80b4;
+    }
+
+    .logout-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .logout-btn form button {
+        background-color: #d63031;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .logout-btn form button:hover {
+        background-color: #c0392b;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- ✅ Logout Button -->
+    <div class="logout-btn">
+        <form action="logout" method="get">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
+    <h4>Transfer Balance</h4>
+    
+    <form action="TransferBalance" method="post">
+        <label>Recipient Account Number:</label>
+        <input type="text" name="recipientAccno" required>
+
+        <label>Amount to Transfer:</label>
+        <input type="text" name="amount" required>
+
+        <input type="submit" value="Transfer Balance">
+    </form>
+</div>
+
+</body>
+</html>

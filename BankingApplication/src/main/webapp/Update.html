@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Update Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #74ebd5 0%, #ACB6E5 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Logout button top-right */
+        .logout-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .logout-container form button {
+            background-color: #e74c3c; /* nice red */
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-container form button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Form container */
+        .form-wrapper {
+            background: #ffffffdd; /* semi-transparent white */
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 400px;
+            max-width: 90vw;
+            text-align: left;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        label {
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: 1.8px solid #3498db;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #2575bd;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            font-weight: 700;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2575bd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logout button top-right -->
+    <div class="logout-container">
+        <form action="logout" method="get" style="display: inline;">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
+    <!-- Form centered -->
+    <div class="form-wrapper">
+        <h3>Update Account</h3>
+        <form action="Update" method="post">
+            <label>User Name</label>
+            <input type="text" name="uname" required>
+
+            <label>Account Number</label>
+            <input type="text" name="accno" required>
+
+            <label>Email</label>
+            <input type="text" name="email" required>
+
+            <label>Phone</label>
+            <input type="text" name="phn" required>
+
+            <label>Balance</label>
+            <input type="text" name="bal" required>
+
+            <label>Password</label>
+            <input type="password" name="pwd" required>
+
+            <input type="submit" name="Update" value="Update">
+        </form>
+    </div>
+
+</body>
+</html>
